@@ -1,4 +1,4 @@
-# Polite Web Scraper
+# Scraper
 
 A simple, general-purpose Python web scraper. You can use this to grab visible text from public webpages (like job postings, articles, etc.) and save it into a clean JSON format. 
 
