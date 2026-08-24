@@ -1,11 +1,17 @@
-# Backend (Python/Django)
-backend/venv/
+# Byte-compiled / optimized / DLL files
 __pycache__/
-*.pyc
-backend/db.sqlite3
-.env
+*.py[cod]
+*$py.class
 
-# Frontend (Node/React)
-frontend/node_modules/
-frontend/dist/
-.DS_Store
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Scraper output data
+scraped_data.json
+*.json
