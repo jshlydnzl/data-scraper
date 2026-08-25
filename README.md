@@ -20,7 +20,14 @@ DATA_POINTS = {
     "Price": ("p", "price_color")
 }
 ```
-The script will automatically adapt to the new website, find all the books, and generate a new CSV with "Book Title" and "Price" columns!
+
+**What do these variables mean?**
+- **Container (`CONTAINER_TAG` & `CONTAINER_CLASS`):** These variables define the boundary of a single item you want to extract. For example, each book on the bookstore website is wrapped inside an `<article class="product_pod">` HTML tag. By setting these variables, the scraper knows how to separate the individual items from each other.
+- **Data Points (`DATA_POINTS`):** This section uses Python tuples in the format `("html_tag", "css_class")` to tell the scraper exactly where to look *inside* each container to find specific pieces of text.
+  - `("h3", "")`: Instructs the scraper to find the `<h3>` tag (with no specific class required) to extract the "Book Title".
+  - `("p", "price_color")`: Instructs the scraper to find the `<p>` tag specifically with the `price_color` class to extract the "Price".
+
+The script will automatically adapt to the new website based on these rules, find all the matching items, and generate a new CSV with "Book Title" and "Price" columns!
 
 ## Pipeline Architecture
 1. **Extract:** Uses a headless Firefox browser controlled by Selenium to bypass basic anti-bot mechanisms and capture fully rendered HTML.

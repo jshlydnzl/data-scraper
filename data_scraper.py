@@ -51,8 +51,9 @@ def scrape_structured_data(url):
             # Loop through the data points you configured above
             for column_name, (tag, css_class) in DATA_POINTS.items():
                 element = box.find(tag, class_=css_class)
-                # If the element exists, grab its text. Otherwise, leave it blank.
-                row[column_name] = element.text.strip() if element else "N/A"
+                # If the element exists, grab its text and remove weird quotation marks.
+                clean_text = element.text.strip().replace('“', '').replace('”', '') if element else "N/A"
+                row[column_name] = clean_text
                 
             structured_data.append(row)
             
