@@ -75,7 +75,7 @@ if __name__ == "__main__":
         df = pd.DataFrame(raw_data)
         
         # Save to CSV (The gold standard for analytics and dashboards)
-        csv_filename = "analytics_ready.csv"
+        csv_filename = "unclean_data.csv"
         df.to_csv(csv_filename, index=False)
         print(f"💾 Saved perfectly structured data to {csv_filename}!")
         

@@ -58,4 +58,7 @@ python data_scraper.py
 ```
 
 **4. View your CSV** 
-Once complete, a brand new file named `analytics_ready.csv` will automatically generate. This is your perfectly structured dataset, ready to be imported into Excel, Tableau, or PowerBI!
+Once complete, a fresh file named `unclean_data.csv` will automatically generate. This dataset is designed to be loaded into Excel for your daily data cleaning and Pivot Table practice!
+
+## Local Automation Pipeline (Linux Cron)
+This repository is configured to act as a local automated data pipeline. A Linux `cron` job (`@reboot`) is installed on the host machine to silently execute the scraper in the background the absolute second the laptop boots up. This ensures that a fresh `unclean_data.csv` file is always waiting for analysis every morning without requiring any manual execution.
