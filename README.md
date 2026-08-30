@@ -59,8 +59,3 @@ python data_scraper.py
 
 **4. View your CSV** 
 Once complete, a brand new file named `analytics_ready.csv` will automatically generate. This is your perfectly structured dataset, ready to be imported into Excel, Tableau, or PowerBI!
-
-## Cloud Automation (Airflow-Style Orchestration)
-This repository is fully automated via **GitHub Actions**. A CI/CD workflow (`.github/workflows/scrape.yml`) is deployed to automatically boot up a cloud Ubuntu server, install Python dependencies, and execute the scraper at **5:00 AM every single day** without any local hardware required. 
-
-The freshly generated `.csv` data is then automatically committed and pushed back into the repository, ensuring fresh data is always waiting for analysis each morning.
