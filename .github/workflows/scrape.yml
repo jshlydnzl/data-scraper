@@ -2,8 +2,8 @@ name: Daily 5AM Scraper
 
 on:
   schedule:
-    # 21:00 UTC is exactly 5:00 AM in UTC+8 (Asia) time
-    - cron: '0 21 * * *'
+    # 10:00 UTC is exactly 6:00 PM in UTC+8 (Philippines) time
+    - cron: '0 10 * * *'
   workflow_dispatch: # Allows you to run it manually anytime by clicking a button
 
 jobs:
