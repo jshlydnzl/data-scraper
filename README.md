@@ -57,4 +57,4 @@ python data_scraper.py
 ```
 
 **3. Analyze Your Data** 
-A file named `unclean_data.csv` will be automatically generated. You can then load this into Excel to practice Data Cleaning (TRIM, XLOOKUP, Pivot Tables), or run it through the `ullr` CLI to audit the data quality!
+A file named `unclean_data.csv` will be automatically generated. You can then load this into Excel to practice Data Cleaning (TRIM, XLOOKUP, Pivot Tables)!
